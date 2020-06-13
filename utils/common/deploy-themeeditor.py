@@ -22,18 +22,19 @@ deploy.program = "rbthemeeditor"
 deploy.project = "utils/themeeditor/themeeditor.pro"
 deploy.svnserver = "svn://svn.rockbox.org/rockbox/"
 deploy.svnpaths = \
-           [ "utils/themeeditor/",
-             "lib/skin_parser/",
-             "docs/COPYING" ]
+           ["utils/themeeditor/",
+            "lib/skin_parser/",
+            "docs/COPYING"]
 deploy.useupx = False
 deploy.bundlecopy = {
     "resources/windowicon.icns" : "Contents/Resources/",
-    "Info.plist"          : "Contents/"
+    "Info.plist"                : "Contents/"
 }
 deploy.progexe = {
     "win32"    : "release/rbthemeeditor.exe",
     "darwin"   : "rbthemeeditor.app",
-    "linux2"   : "rbthemeeditor"
+    "linux2"   : "rbthemeeditor",
+    "linux"    : "rbthemeeditor"
 }
 deploy.regreplace = {}
 # OS X 10.6 defaults to gcc 4.2. Building universal binaries that are
@@ -41,18 +42,20 @@ deploy.regreplace = {}
 deploy.qmakespec = {
     "win32"    : "",
     "darwin"   : "macx-g++40",
-    "linux2"   : ""
+    "linux2"   : "",
+    "linux"    : ""
 }
 deploy.make = {
     "win32"    : "mingw32-make",
     "darwin"   : "make",
-    "linux2"   : "make"
+    "linux2"   : "make",
+    "linux"    : "make"
 }
 
 # all files of the program. Will get put into an archive after building
 # (zip on w32, tar.bz2 on Linux). Does not apply on Mac which uses dmg.
 # progexe will get added automatically.
-deploy.programfiles = [ ]
+deploy.programfiles = list()
 deploy.nsisscript = "utils/themeeditor/themeeditor.nsi"
 
 deploy.deploy()
