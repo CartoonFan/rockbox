@@ -970,6 +970,7 @@ static int find_index(const char *filename)
 
 bool tagcache_find_index(struct tagcache_search *tcs, const char *filename)
 {
+    /* NOTE: on ret==true you need to call tagcache_search_finish(tcs) yourself */
     int idx_id;
 
     if (!tc_stat.ready)
@@ -1721,6 +1722,7 @@ static bool build_lookup_list(struct tagcache_search *tcs)
 
 bool tagcache_search(struct tagcache_search *tcs, int tag)
 {
+    /* NOTE: call tagcache_search_finish(&tcs) when finished or BAD things may happen (TM) */
     struct tagcache_header tag_hdr;
     struct master_header   master_hdr;
     int i;
@@ -2085,13 +2087,18 @@ bool tagcache_fill_tags(struct mp3entry *id3, const char *filename)
         return false;
 
     /* Find the corresponding entry in tagcache. */
+
+    if (filename != NULL)
+        memset(id3, 0, sizeof(struct mp3entry));
+    else /* Note: caller clears id3 prior to call */
+        filename = id3->path;
+
     idx_id = find_entry_ram(filename);
     if (idx_id < 0)
         return false;
 
     entry = &tcramcache.hdr->indices[idx_id];
-
-    memset(id3, 0, sizeof(struct mp3entry));
+   
     char* buf = id3->id3v2buf;
     ssize_t remaining = sizeof(id3->id3v2buf);
 
@@ -3931,6 +3938,7 @@ bool tagcache_create_changelog(struct tagcache_search *tcs)
     if (clfd < 0)
     {
         logf("failure to open changelog");
+        tagcache_search_finish(tcs);
         return false;
     }
 
@@ -3939,6 +3947,7 @@ bool tagcache_create_changelog(struct tagcache_search *tcs)
         if ( (tcs->masterfd = open_master_fd(&myhdr, false)) < 0)
         {
             close(clfd);
+            tagcache_search_finish(tcs);
             return false;
         }
     }

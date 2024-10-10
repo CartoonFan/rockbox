@@ -56,6 +56,10 @@
 #include "crc32.h"
 #endif
 
+#if defined(HAVE_DEVICEDATA) && !defined(SIMULATOR)
+#include "devicedata.h"
+#endif
+
 #if CONFIG_CPU == AS3525v2
 #include "ascodec.h"
 #endif
@@ -250,9 +254,8 @@ int rolo_load(const char* filename)
 
     err = LOAD_FIRMWARE(filebuf, filename, filebuf_size);
 #if defined(HAVE_BOOTDATA) && !defined(SIMULATOR)
-    /* write the bootdata as if rolo were the bootloader
-     * FIXME: this won't work for root redirect... */
-    if (!strcmp(filename, BOOTDIR "/" BOOTFILE) && boot_data_valid)
+    // Write bootdata as long as the existing bootdata is valid
+    if (boot_data_valid)
     {
         int volume = 0;
 
@@ -273,6 +276,10 @@ int rolo_load(const char* filename)
 
         write_bootdata(filebuf, filebuf_size, volume);
     }
+#endif
+
+#if defined(HAVE_DEVICEDATA)
+    write_devicedata(filebuf, filebuf_size);
 #endif
 
     if (err <= 0)

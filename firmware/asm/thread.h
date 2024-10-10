@@ -46,10 +46,16 @@ struct regs
      * give a decent amount of space and hope for the best...
      * FIXME: this isn't a great solution. */
     #undef MINSIGSTKSZ
-    #define MINSIGSTKSZ 16384
     #endif
-    /* MINSIGSTKSZ for the OS to deliver the signal + 0x3000 for us */
+    #ifndef MINSIGSTKSZ
+      #define MINSIGSTKSZ 16384
+    #endif
+    /* MINSIGSTKSZ for the OS to deliver the signal, plus more for us */
+#if defined(SIMULATOR) || defined(__aarch64__)
+    #define DEFAULT_STACK_SIZE (MINSIGSTKSZ+0x6000) /* Bytes */
+#else
     #define DEFAULT_STACK_SIZE (MINSIGSTKSZ+0x3000) /* Bytes */
+#endif
   #elif defined(HAVE_WIN32_FIBER_THREADS)
     #define DEFAULT_STACK_SIZE 0x1000 /* Bytes */
   #endif

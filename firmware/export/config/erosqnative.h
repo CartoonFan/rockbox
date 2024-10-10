@@ -9,6 +9,19 @@
 #define BOOTFILE     "rockbox." BOOTFILE_EXT
 #define BOOTDIR      "/.rockbox"
 
+/* Define EROSQN_VER as an "extradefine" in the configure script -
+ * v1, v2 players: "1"
+ * v3 players: "3"
+ * Only bootloader will be affected.
+ *
+ * This allows us to fix the LCD init issues with v3 players.
+ */
+#ifdef BOOTLOADER
+#ifndef EROSQN_VER
+#error "Must define EROSQN_VER"
+#endif
+#endif
+
 /* CPU defines */
 #define CONFIG_CPU      X1000
 #define X1000_EXCLK_FREQ   24000000
@@ -105,6 +118,9 @@
 /* Multiboot */
 #define HAVE_BOOTDATA
 #define BOOT_REDIR "rockbox_main.aigo_erosqn"
+
+/* DeviceData */
+#define HAVE_DEVICEDATA
 
 /* USB support */
 #ifndef SIMULATOR

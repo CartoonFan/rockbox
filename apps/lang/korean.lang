@@ -486,10 +486,10 @@
   desc: top item in the list when asking user about bookmark auto load
   user: core
   <source>
-    *: "<Don't Resume>"
+    *: "[Don't Resume]"
   </source>
   <dest>
-    *: "<재시작하지 않음>"
+    *: "[재시작하지 않음]"
   </dest>
   <voice>
     *: "재시작하지 않음"
@@ -514,10 +514,10 @@
   desc: bookmark selection list, bookmark couldn't be parsed
   user: core
   <source>
-    *: "<Invalid Bookmark>"
+    *: "[Invalid Bookmark]"
   </source>
   <dest>
-    *: "<잘못된 북마크>"
+    *: "[잘못된 북마크]"
   </dest>
   <voice>
     *: "잘못된 북마크"
@@ -2138,13 +2138,13 @@
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_ALL_TRACKS
-  desc: "<All tracks>" entry in tag browser
+  desc: "[All tracks]" entry in tag browser
   user: core
   <source>
-    *: "<All tracks>"
+    *: "[All tracks]"
   </source>
   <dest>
-    *: "<모든 트랙>"
+    *: "[모든 트랙]"
   </dest>
   <voice>
     *: "모든 트랙"
@@ -6585,10 +6585,10 @@
   desc: in tag viewer
   user: core
   <source>
-    *: "<No Info>"
+    *: "[No Info]"
   </source>
   <dest>
-    *: "<정보 없음>"
+    *: "[정보 없음]"
   </dest>
   <voice>
     *: "정보 없음"
@@ -9247,13 +9247,13 @@
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_RANDOM
-  desc: "<Random>" entry in tag browser
+  desc: "[Random]" entry in tag browser
   user: core
   <source>
-    *: "<Random>"
+    *: "[Random]"
   </source>
   <dest>
-    *: "<랜덤>"
+    *: "[랜덤]"
   </dest>
   <voice>
     *: "랜덤"
@@ -11097,13 +11097,13 @@
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_UNTAGGED
-  desc: "<untagged>" entry in tag browser
+  desc: "[untagged]" entry in tag browser
   user: core
   <source>
-    *: "<Untagged>"
+    *: "[Untagged]"
   </source>
   <dest>
-    *: "<태그가 지정되지 않음>"
+    *: "[태그가 지정되지 않음]"
   </dest>
   <voice>
     *: "태그가 지정되지 않음"
@@ -16449,5 +16449,61 @@
   </dest>
   <voice>
     *: "남은"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISABLE_MAINMENU_SCROLLING
+  desc: Disable main menu scrolling
+  user: core
+  <source>
+    *: "Disable main menu scrolling"
+  </source>
+  <dest>
+    *: "메인 메뉴 스크롤 비활성화"
+  </dest>
+  <voice>
+    *: "메인 메뉴 스크롤 비활성화"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_RANDOM_SHUFFLE_RANDOM_SELECTIVE_SONGS_SUMMARY
+  desc: a summary splash screen that appear on the database browser when you try to create a playlist from the database browser that exceeds your system limit
+  user: core
+  <source>
+    *: "Selection too big, %d random tracks will be selected"
+  </source>
+  <dest>
+    *: "선택이 너무 커서, %d 개의 무작위 트랙이 선택됨"
+  </dest>
+  <voice>
+    *: "선택이 너무 커서 무작위로 선택되는 트랙이 줄어듬"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISPLAY_TITLEALBUM_FROMTAGS
+  desc: track display options
+  user: core
+  <source>
+    *: "Title & Album from ID3 tags"
+  </source>
+  <dest>
+    *: "ID3 태그 제목 & 앨범"
+  </dest>
+  <voice>
+    *: "태그의 제목 및 앨범"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISPLAY_TITLE_FROMTAGS
+  desc: track display options
+  user: core
+  <source>
+    *: "Title from ID3 tags"
+  </source>
+  <dest>
+    *: "ID3 태그 제목"
+  </dest>
+  <voice>
+    *: "태그 제목"
   </voice>
 </phrase>

@@ -4,12 +4,11 @@
 #   Jukebox    |    |   (  <_> )  \___|    < | \_\ (  <_> > <  <
 #   Firmware   |____|_  /\____/ \___  >__|_ \|___  /\____/__/\_ \
 #                     \/            \/     \/    \/            \/
-# $Id$
 #
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or (at
+# your option) any later version.
 #
 # This software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY
 # KIND, either express or implied.
@@ -29,6 +28,8 @@
 # - James Hunt
 # - Dmitriy Gamza
 # - Roman Levkin-Taymenev
+# - Igor Poretsky
+# - Dmitry Prozorov
 <phrase>
   id: LANG_SET_BOOL_YES
   desc: bool true representation
@@ -317,7 +318,7 @@
 </phrase>
 <phrase>
   id: LANG_CHANNEL_STEREO
-  desc: in sound_settings
+  desc: in sound_settings and radio screen
   user: core
   <source>
     *: "Stereo"
@@ -331,7 +332,7 @@
 </phrase>
 <phrase>
   id: LANG_CHANNEL_MONO
-  desc: in sound_settings
+  desc: in sound_settings and radio screen
   user: core
   <source>
     *: "Mono"
@@ -694,20 +695,6 @@
   </dest>
   <voice>
     *: "Загрузить настройки"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_EQUALIZER_EDIT_MODE
-  desc: in the equalizer settings menu
-  user: core
-  <source>
-    *: "Edit mode: %s"
-  </source>
-  <dest>
-    *: "Режим редактирования: %s"
-  </dest>
-  <voice>
-    *: ""
   </voice>
 </phrase>
 <phrase>
@@ -1431,15 +1418,12 @@
   user: core
   <source>
     *: "Peak Meter"
-    masd: none
   </source>
   <dest>
     *: "Уровень сигнала"
-    masd: none
   </dest>
   <voice>
     *: "Уровень сигнала"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2033,23 +2017,6 @@
   <voice>
     *: none
     recording: "Время предзаписи"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_RECORD_DIRECTORY
-  desc: in recording settings_menu
-  user: core
-  <source>
-    *: none
-    recording: "Directory"
-  </source>
-  <dest>
-    *: none
-    recording: "Папка"
-  </dest>
-  <voice>
-    *: none
-    recording: "Папка"
   </voice>
 </phrase>
 <phrase>
@@ -2818,15 +2785,12 @@
   user: core
   <source>
     *: "Peak Release"
-    masd: none
   </source>
   <dest>
     *: "Сброс пиков"
-    masd: none
   </dest>
   <voice>
     *: "Сброс пиков"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2835,15 +2799,12 @@
   user: core
   <source>
     *: "Peak Hold Time"
-    masd: none
   </source>
   <dest>
     *: "Время удержания пиков"
-    masd: none
   </dest>
   <voice>
     *: "Время удержания пиков"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2852,15 +2813,12 @@
   user: core
   <source>
     *: "Clip Hold Time"
-    masd: none
   </source>
   <dest>
     *: "Время удержания индикатора"
-    masd: none
   </dest>
   <voice>
     *: "Время удержания индикатора"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2869,15 +2827,12 @@
   user: core
   <source>
     *: "Eternal"
-    masd: none
   </source>
   <dest>
     *: "Постоянно"
-    masd: none
   </dest>
   <voice>
     *: "Постоянно"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2886,15 +2841,12 @@
   user: core
   <source>
     *: "Scale"
-    masd: none
   </source>
   <dest>
     *: "Шкала"
-    masd: none
   </dest>
   <voice>
     *: "Шкала"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2903,15 +2855,12 @@
   user: core
   <source>
     *: "Logarithmic (dB)"
-    masd: none
   </source>
   <dest>
     *: "Логарифмическая (дБ)"
-    masd: none
   </dest>
   <voice>
     *: "Логарифмическая в децибелах"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2920,15 +2869,12 @@
   user: core
   <source>
     *: "Linear (%)"
-    masd: none
   </source>
   <dest>
     *: "Линейная (%)"
-    masd: none
   </dest>
   <voice>
     *: "Линейная в процентах"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2937,15 +2883,12 @@
   user: core
   <source>
     *: "Minimum Of Range"
-    masd: none
   </source>
   <dest>
     *: "Нижняя граница диапазона"
-    masd: none
   </dest>
   <voice>
     *: "Нижняя граница диапазона"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -2954,15 +2897,12 @@
   user: core
   <source>
     *: "Maximum Of Range"
-    masd: none
   </source>
   <dest>
     *: "Верхняя граница диапазона"
-    masd: none
   </dest>
   <voice>
     *: "Верхняя граница диапазона"
-    masd: none
   </voice>
 </phrase>
 <phrase>
@@ -3354,62 +3294,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_INSERT
-  desc: in onplay menu.  insert a track/playlist into dynamic playlist.
-  user: core
-  <source>
-    *: "Insert"
-  </source>
-  <dest>
-    *: "Вставить"
-  </dest>
-  <voice>
-    *: "Вставить"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_INSERT_FIRST
-  desc: in onplay menu.  insert a track/playlist into dynamic playlist.
-  user: core
-  <source>
-    *: "Insert Next"
-  </source>
-  <dest>
-    *: "Вставить следующим"
-  </dest>
-  <voice>
-    *: "Вставить следующим"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_INSERT_LAST
-  desc: in onplay menu.  append a track/playlist into dynamic playlist.
-  user: core
-  <source>
-    *: "Insert Last"
-  </source>
-  <dest>
-    *: "Вставить в конец"
-  </dest>
-  <voice>
-    *: "Вставить в конец"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_INSERT_SHUFFLED
-  desc: in onplay menu.  insert a track/playlist randomly into dynamic playlist
-  user: core
-  <source>
-    *: "Insert Shuffled"
-  </source>
-  <dest>
-    *: "Вставить в случайное место"
-  </dest>
-  <voice>
-    *: "Вставить в случайное место"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_QUEUE
   desc: The verb/action Queue
   user: core
@@ -3521,24 +3405,7 @@
   </dest>
   <voice>
     *: none
-    charging: "Аккумулятор: Заряжается"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_BATTERY_TRICKLE_CHARGE
-  desc: in info display, shows that trickle charge is running
-  user: core
-  <source>
-    *: none
-    charging: "Battery: Trickle Chg"
-  </source>
-  <dest>
-    *: none
-    charging: "Аккумулятор: Импульсн. заряд"
-  </dest>
-  <voice>
-    *: none
-    charging: "Аккумулятор: Импульсн. заряд"
+    charging: "Аккумулятор заряжен"
   </voice>
 </phrase>
 <phrase>
@@ -3548,11 +3415,10 @@
   <source>
     *: "Battery: %d%% %dh %dm"
     ipodmini1g,ipodmini2g,iriverh10: "Batt: %d%% %dh %dm"
-    iriverifp7xx: "%d%% %dh %dm"
   </source>
   <dest>
     *: "%d%% %dч %dм"
-    ipodmini1g,ipodmini2g,iriverh10,iriverifp7xx: "%d%% %dч %dм"
+    ipodmini1g,ipodmini2g,iriverh10: "%d%% %dч %dм"
   </dest>
   <voice>
     *: "Заряд аккумулятора"
@@ -3569,7 +3435,7 @@
     *: "Диск:"
   </dest>
   <voice>
-    *: "Диск:"
+    *: "Размер диска"
   </voice>
 </phrase>
 <phrase>
@@ -3592,39 +3458,41 @@
   user: core
   <source>
     *: "Int:"
-    xduoox3: "mSD1:"
     hibylinux: "mSD:"
+    xduoox3: "mSD1:"
   </source>
   <dest>
     *: "Внутр:"
-    xduoox3: "mSD1:"
-    hibylinux: "mSD:"
+    hibylinux,xduoox3: "микро Эс Ди:"
   </dest>
   <voice>
     *: "Внутр"
-    xduoox3: "микро Эс Ди 1"
     hibylinux: "микро Эс Ди"
+    xduoox3: "микро Эс Ди 1"
   </voice>
 </phrase>
 <phrase>
   id: LANG_DISK_NAME_MMC
-  desc: in info menu;  name for external disk with multivolume (Ondio; keep short!)
+  desc: in info menu;  name for external disk with multivolume (keep short!)
   user: core
   <source>
     *: none
-    multivolume: "HD1"
+    hibylinux: "USB:"
+    multivolume: "HD1:"
     sansac200*,sansaclipplus,sansae200*,sansafuze*: "mSD:"
     xduoox3: "mSD2:"
   </source>
   <dest>
     *: none
-    multivolume: "HD1"
-    sansac200*,sansaclipplus,sansae200*,sansafuze*: "mSD:"
-    xduoox3: "mSD2:"
+    hibylinux: "ЮСБ:"
+    multivolume: "ХД1"
+    sansac200*,sansaclipplus,sansae200*,sansafuze*: "микро Эс Ди:"
+    xduoox3: "микро Эс Ди2:"
   </dest>
   <voice>
     *: none
-    multivolume: "Эйч Ди 1"
+    hibylinux: "Ю С Б"
+    multivolume: "Х Д 1"
     sansac200*,sansaclipplus,sansae200*,sansafuze*: "микро Эс Ди"
     xduoox3: "микро Эс Ди 2"
   </voice>
@@ -3643,7 +3511,7 @@
   </dest>
   <voice>
     *: none
-    rtc: "Текущее время:"
+    rtc: "Текущее время"
   </voice>
 </phrase>
 <phrase>
@@ -3771,7 +3639,7 @@
   <dest>
     *: none
     gigabeatfx,mrobe500,rtc: "ВЫКЛ. = Отмена"
-    gigabeats: "НАЗАД = Отмена"
+    gigabeats,sansafuzeplus: "НАЗАД = Отмена"
     gogearsa9200: "ЛЕВО = Отмена"
     iaudiom5,iaudiox5: "ЗАПИСЬ = Отмена"
     ipod*,mpiohd300,sansac200*: "МЕНЮ = Отмена"
@@ -3783,6 +3651,7 @@
   </dest>
   <voice>
     *: none
+    gigabeat*,gogearsa9200,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh100,iriverh10_5gb,iriverh120,iriverh300,mrobe100,rtc,samsungyh*,sansac200*,sansae200*: ""
   </voice>
 </phrase>
 <phrase>
@@ -3840,6 +3709,7 @@
   </dest>
   <voice>
     *: none
+    iaudiom5,iaudiox5,iriverh100,iriverh120,iriverh300,recording,samsungyh*,sansac200*,sansae200*,vibe500: ""
   </voice>
 </phrase>
 <phrase>
@@ -3911,23 +3781,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_DB_INF
-  desc: -inf db for values below measurement
-  user: core
-  <source>
-    *: none
-    recording: "-inf"
-  </source>
-  <dest>
-    *: none
-    recording: "-inf"
-  </dest>
-  <voice>
-    *: none
-    recording: "-inf"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_ALARM_MOD_TIME
   desc: The current alarm time shown in the alarm menu for the RTC alarm mod.
   user: core
@@ -3962,23 +3815,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_ALARM_MOD_SHUTDOWN
-  desc: The text that tells the user that the alarm time is ok and the device shuts off (for the RTC alarm mod).
-  user: core
-  <source>
-    *: none
-    alarm: "Alarm Set"
-  </source>
-  <dest>
-    *: none
-    alarm: "Установить будильник"
-  </dest>
-  <voice>
-    *: none
-    alarm: "Установить будильник"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_ALARM_MOD_ERROR
   desc: The text that tells that the time is incorrect (for the RTC alarm mod).
   user: core
@@ -3993,35 +3829,6 @@
   <voice>
     *: none
     alarm: "Будильник слишком скоро!"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_ALARM_MOD_KEYS
-  desc: Shown key functions in alarm menu (for the RTC alarm mod).
-  user: core
-  <source>
-    *: none
-    alarm: "PLAY=Set OFF=Cancel"
-    gigabeats: "SELECT=Set POWER=Cancel"
-    ipod*: "SELECT=Set MENU=Cancel"
-    iriverh10,iriverh10_5gb: "SELECT=Set PREV=Cancel"
-    mpiohd300: "ENTER=Set MENU=Cancel"
-    sansafuzeplus: "SELECT=Set  BACK=Cancel"
-    vibe500: "OK=Set C=Cancel"
-  </source>
-  <dest>
-    *: none
-    alarm: "ВОСПР.=Уст., ВЫКЛ.=Отм."
-    gigabeats: "ВЫБОР=Уст., ВЫКЛ.=Отм."
-    ipod*: "ВЫБОР=Уст., МЕНЮ=Отм."
-    iriverh10,iriverh10_5gb: "ВЫБОР=Уст., ПРЕД.=Отм."
-    mpiohd300: "ENTER=Уст., MENU=Отм."
-    sansafuzeplus: "SELECT=Уст.,  BACK=Отм."
-    vibe500: "OK=Уст., C=Отм."
-  </dest>
-  <voice>
-    *: none
-    alarm,gigabeats,ipod*,iriverh10,iriverh10_5gb: ""
   </voice>
 </phrase>
 <phrase>
@@ -4196,20 +4003,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_ID3_ALBUM_GAIN
-  desc: in tag viewer
-  user: core
-  <source>
-    *: "Album Gain"
-  </source>
-  <dest>
-    *: "Усиление альбома"
-  </dest>
-  <voice>
-    *: "Усиление альбома"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_ID3_PATH
   desc: in tag viewer
   user: core
@@ -4228,10 +4021,10 @@
   desc: in tag viewer
   user: core
   <source>
-    *: "<No Info>"
+    *: "[No Info]"
   </source>
   <dest>
-    *: "<Нет информ.>"
+    *: "[Нет информ.]"
   </dest>
   <voice>
     *: "Нет информации"
@@ -5218,7 +5011,7 @@
     *: "."
   </source>
   <dest>
-    *: "."
+    *: "~."
   </dest>
   <voice>
     *: "точка"
@@ -5823,10 +5616,10 @@
     *: "Saved %d tracks (%s)"
   </source>
   <dest>
-    *: "Сохранено %d треков (%d)"
+    *: "Сохранено %d треков (%s)"
   </dest>
   <voice>
-    *: "Трэков сохранено"
+    *: "Треков сохранено"
   </voice>
 </phrase>
 <phrase>
@@ -5869,20 +5662,6 @@
   </dest>
   <voice>
     *: "Нечего продолжать"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PLAYLIST_CONTROL_UPDATE_ERROR
-  desc: Playlist error
-  user: core
-  <source>
-    *: "Error updating playlist control file"
-  </source>
-  <dest>
-    *: "Ошибка при обновлении файла списка воспроизведения"
-  </dest>
-  <voice>
-    *: "Ошибка при обновлении файла списка воспроизведения"
   </voice>
 </phrase>
 <phrase>
@@ -6041,91 +5820,6 @@
   <voice>
     *: none
     radio: "Список предустановок полон"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_BUTTONBAR_MENU
-  desc: in button bar
-  user: core
-  <source>
-    *: none
-    radio_screen_button_bar: "Menu"
-  </source>
-  <dest>
-    *: none
-    radio_screen_button_bar: "Меню"
-  </dest>
-  <voice>
-    *: none
-    radio_screen_button_bar: ""
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_FM_BUTTONBAR_EXIT
-  desc: in radio screen
-  user: core
-  <source>
-    *: none
-    radio_screen_button_bar: "Exit"
-  </source>
-  <dest>
-    *: none
-    radio_screen_button_bar: "Выход"
-  </dest>
-  <voice>
-    *: none
-    radio_screen_button_bar: ""
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_FM_BUTTONBAR_ACTION
-  desc: in radio screen
-  user: core
-  <source>
-    *: none
-    radio_screen_button_bar: "Action"
-  </source>
-  <dest>
-    *: none
-    radio_screen_button_bar: "Действие"
-  </dest>
-  <voice>
-    *: none
-    radio_screen_button_bar: ""
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_FM_BUTTONBAR_ADD
-  desc: in radio screen
-  user: core
-  <source>
-    *: none
-    radio_screen_button_bar: "Add"
-  </source>
-  <dest>
-    *: none
-    radio_screen_button_bar: "Добавить"
-  </dest>
-  <voice>
-    *: none
-    radio_screen_button_bar: ""
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_FM_BUTTONBAR_RECORD
-  desc: in radio screen
-  user: core
-  <source>
-    *: none
-    radio_screen_button_bar: "Record"
-  </source>
-  <dest>
-    *: none
-    radio_screen_button_bar: "Запись"
-  </dest>
-  <voice>
-    *: none
-    radio_screen_button_bar: ""
   </voice>
 </phrase>
 <phrase>
@@ -6333,7 +6027,7 @@
 </phrase>
 <phrase>
   id: LANG_OFF_ABORT
-  desc: Used on archosrecorder models
+  desc: Used on many models
   user: core
   <source>
     *: "OFF to abort"
@@ -6347,7 +6041,7 @@
   <dest>
     *: "ВЫКЛ. для отмены"
     gigabeatfx: "ВЫКЛ. для отмены"
-    gigabeats: "НАЗАД для отмены"
+    gigabeats,sansafuzeplus: "НАЗАД для отмены"
     iaudiom5,iaudiox5: "ВОСПР. для отмены"
     ipod*: "ПАУЗА для отмены"
     iriverh10,iriverh10_5gb,sansac200*,sansae200*,vibe500: "ПРЕД. для отмены"
@@ -6485,7 +6179,7 @@
 </phrase>
 <phrase>
   id: LANG_PLUGIN_WRONG_MODEL
-  desc: The plugin is not compatible with the archos model trying to run it
+  desc: The plugin is not compatible with the player model trying to run it
   user: core
   <source>
     *: "Incompatible model"
@@ -6697,7 +6391,6 @@
   user: core
   <source>
     *: "Building database... %d found (OFF to return)"
-    archosplayer: "Building DB %d found"
     gigabeat*,iaudiom5,iaudiox5,mrobe100,samsungyh*: "Building database... %d found (LEFT to return)"
     gogearsa9200: "Building database... %d found (REW to return)"
     ipod*,iriverh10,iriverh10_5gb,sansac200*,sansae200*,sansafuze*,vibe500: "Building database... %d found (PREV to return)"
@@ -6705,7 +6398,6 @@
   </source>
   <dest>
     *: "Построение базы... %d найдено (ВЫКЛ. для отмены)"
-    archosplayer: "Построение БД... %d найдено"
     gigabeat*,iaudiom5,iaudiox5,mrobe100,samsungyh*: "Построение базы... %d найдено (ВЛЕВО для отмены)"
     gogearsa9200: "Построение базы... %d найдено (РЕВЕРС. для отмены)"
     ipod*,iriverh10,iriverh10_5gb,sansac200*,sansae200*,sansafuze*,vibe500: "Построение базы... %d найдено (ПРЕД. для отмены)"
@@ -6726,18 +6418,18 @@
     *: "Сканирование диска..."
   </dest>
   <voice>
-    *: "Сканирование диска..."
+    *: "Сканирование диска"
   </voice>
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_ALL_TRACKS
-  desc: "<All tracks>" entry in tag browser
+  desc: "[All tracks]" entry in tag browser
   user: core
   <source>
-    *: "<All tracks>"
+    *: "[All tracks]"
   </source>
   <dest>
-    *: "<Все треки>"
+    *: "[Все треки]"
   </dest>
   <voice>
     *: "Все трэки"
@@ -6892,7 +6584,7 @@
     *: "Удаление..."
   </dest>
   <voice>
-    *: "Удаление..."
+    *: "Удаление"
   </voice>
 </phrase>
 <phrase>
@@ -7318,14 +7010,12 @@
   user: core
   <source>
     *: "Buffer:"
-    archosplayer: "Buf:"
   </source>
   <dest>
     *: "Буфер:"
-    archosplayer: "Буф:"
   </dest>
   <voice>
-    *: "Буфер:"
+    *: "Размер буфера"
   </voice>
 </phrase>
 <phrase>
@@ -7396,17 +7086,14 @@
   user: core
   <source>
     *: "PLAY = Yes"
-    archosplayer: "(PLAY/STOP)"
     cowond2*: "MENU, or top-right = Yes"
-    creativezen*: "SELECT = Yes"
-    gigabeat*,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh10_5gb,mrobe100,sansac200*,sansaclip*,sansaconnect,sansae200*,sansafuze*: "SELECT = Yes"
+    creativezen*,gigabeat*,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh10_5gb,mrobe100,sansac200*,sansaclip*,sansaconnect,sansae200*,sansafuze*: "SELECT = Yes"
     iriverh100,iriverh120,iriverh300: "NAVI = Yes"
     mrobe500: "PLAY, POWER, or top-right = Yes"
     vibe500: "OK = Yes"
   </source>
   <dest>
     *: "ВОСПР. = Да"
-    archosplayer: "(ВОСПР./СТОП)"
     cowond2*: "МЕНЮ или прав. верх. = Да"
     creativezen*: "Выбрать = Да"
     gigabeat*,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh10_5gb,mrobe100,sansac200*,sansaclip*,sansaconnect,sansae200*,sansafuze*: "ВЫБРАТЬ = Да"
@@ -7434,7 +7121,7 @@
   </source>
   <dest>
     *: none
-    gigabeat*,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh10_5gb,mrobe100,sansac200*,sansaclip*,sansae200*,sansafuze*: "ВЫБОР = Установить"
+    gigabeat*,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh10_5gb,mrobe100,sansac200*,sansaclip*,sansaconnect,sansae200*,sansafuze*: "ВЫБОР = Установить"
     gogearsa9200,samsungyh*: "ВОСПР. = Установить"
     iriverh100,iriverh120,iriverh300: "НАВИГ. = Установить"
     mpiohd300: "ENTER = Установить"
@@ -7444,7 +7131,7 @@
   </dest>
   <voice>
     *: none
-    gigabeat*,gogearsa9200,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh100,iriverh10_5gb,iriverh120,iriverh300,mrobe100,rtc,sansac200*,sansae200*: ""
+    gigabeat*,gogearsa9200,iaudiom5,iaudiox5,ipod*,iriverh10,iriverh100,iriverh10_5gb,iriverh120,iriverh300,mrobe100,rtc,samsungyh*,sansac200*,sansae200*: ""
   </voice>
 </phrase>
 <phrase>
@@ -7453,15 +7140,12 @@
   user: core
   <source>
     *: "Any Other = No"
-    archosplayer: none
   </source>
   <dest>
     *: "Любая другая = Нет"
-    archosplayer: none
   </dest>
   <voice>
     *: ""
-    archosplayer: none
   </voice>
 </phrase>
 <phrase>
@@ -7556,13 +7240,13 @@
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_RANDOM
-  desc: "<Random>" entry in tag browser
+  desc: "[Random]" entry in tag browser
   user: core
   <source>
-    *: "<Random>"
+    *: "[Random]"
   </source>
   <dest>
-    *: "<Случайный>"
+    *: "[Случайный]"
   </dest>
   <voice>
     *: "Случайный"
@@ -7768,11 +7452,9 @@
   user: core
   <source>
     *: "End of Song List"
-    archosplayer: "End of List"
   </source>
   <dest>
     *: "Конец списка"
-    archosplayer: "Конец списка"
   </dest>
   <voice>
     *: "Конец списка"
@@ -8039,11 +7721,11 @@
   </source>
   <dest>
     *: none
-    remote: "(Vol- : Реактивировать)"
+    remote: "(Громкость - : чтобы снова включить)"
   </dest>
   <voice>
     *: none
-    remote: "(Vol- : Реактивировать)"
+    remote: "(Уменьшите громкость, чтобы снова включить)"
   </voice>
 </phrase>
 <phrase>
@@ -8071,7 +7753,7 @@
     *: "Режим:"
   </dest>
   <voice>
-    *: "Режим:"
+    *: "Режим"
   </voice>
 </phrase>
 <phrase>
@@ -8199,20 +7881,6 @@
   <voice>
     *: none
     headphone_detection: "Пауза при отключении наушников"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_REPLACE
-  desc: in onplay menu.  Replace the current playlist with a new one.
-  user: core
-  <source>
-    *: "Play Next"
-  </source>
-  <dest>
-    *: "Играть следующий"
-  </dest>
-  <voice>
-    *: "Играть следующий"
   </voice>
 </phrase>
 <phrase>
@@ -8720,20 +8388,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_CATALOG_ADD_TO
-  desc: in onplay playlist catalogue submenu
-  user: core
-  <source>
-    *: "Add to Playlist"
-  </source>
-  <dest>
-    *: "Добавить в список"
-  </dest>
-  <voice>
-    *: "Добавить в список"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_BUTTONLIGHT_BRIGHTNESS
   desc: in settings_menu
   user: core
@@ -8907,27 +8561,13 @@
   desc: top item in the list when asking user about bookmark auto load
   user: core
   <source>
-    *: "<Don't Resume>"
+    *: "[Don't Resume]"
   </source>
   <dest>
-    *: "<Не продолжать>"
+    *: "[Не продолжать]"
   </dest>
   <voice>
     *: "Не продолжать"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_BOOKMARK_CONTEXT_DELETE
-  desc: bookmark context menu, delete this bookmark
-  user: core
-  <source>
-    *: "Delete"
-  </source>
-  <dest>
-    *: "Удалить"
-  </dest>
-  <voice>
-    *: "Удалить"
   </voice>
 </phrase>
 <phrase>
@@ -9093,7 +8733,7 @@
     *: "Перемещение..."
   </dest>
   <voice>
-    *: "Перемещение..."
+    *: "Перемещение"
   </voice>
 </phrase>
 <phrase>
@@ -9136,20 +8776,6 @@
   </dest>
   <voice>
     *: "Подавление высоких частот"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_CATALOG_VIEW
-  desc: in onplay playlist catalogue submenu
-  user: core
-  <source>
-    *: "View Catalogue"
-  </source>
-  <dest>
-    *: "Каталог"
-  </dest>
-  <voice>
-    *: "Каталог"
   </voice>
 </phrase>
 <phrase>
@@ -9202,10 +8828,10 @@
   desc: bookmark selection list, bookmark couldn't be parsed
   user: core
   <source>
-    *: "<Invalid Bookmark>"
+    *: "[Invalid Bookmark]"
   </source>
   <dest>
-    *: "<Неверная закладка>"
+    *: "[Неверная закладка]"
   </dest>
   <voice>
     *: "Неверная закладка"
@@ -9269,11 +8895,11 @@
   </source>
   <dest>
     *: none
-    recording: "MPEG Layer 3"
+    recording: "MPEG Слой 3"
   </dest>
   <voice>
     *: none
-    recording: "MPEG Layer 3"
+    recording: "MPEG Слой 3"
   </voice>
 </phrase>
 <phrase>
@@ -9410,10 +9036,10 @@
 </phrase>
 <phrase>
   id: LANG_AUDIOSCROBBLER
-  desc: "Last.fm Log" in the playback menu
+  desc: "Last.fm Logger" in Plugin/apps/scrobbler
   user: core
   <source>
-    *: "Last.fm Log"
+    *: "Last.fm Logger"
   </source>
   <dest>
     *: "Отчёт для Last.fm"
@@ -9534,7 +9160,7 @@
     *: "%s не существует"
   </dest>
   <voice>
-    *: ""
+    *: "Каталог плейлистов не существует"
   </voice>
 </phrase>
 <phrase>
@@ -9580,23 +9206,6 @@
   <voice>
     *: none
     recording: "Тип триггера"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_SET_AS_REC_DIR
-  desc: used in the onplay menu to set a recording dir
-  user: core
-  <source>
-    *: none
-    recording: "Set As Recording Directory"
-  </source>
-  <dest>
-    *: none
-    recording: "Установить как папку записи"
-  </dest>
-  <voice>
-    *: none
-    recording: "Установить как папку записи"
   </voice>
 </phrase>
 <phrase>
@@ -9832,7 +9441,7 @@
     *: ""
   </dest>
   <voice>
-    *: "OK"
+    *: "Oк"
   </voice>
 </phrase>
 <phrase>
@@ -10369,7 +9978,7 @@
     *: "Следующий трек:"
   </dest>
   <voice>
-    *: "Следующий трэк:"
+    *: "Следующий трэк"
   </voice>
 </phrase>
 <phrase>
@@ -10383,7 +9992,7 @@
     *: "Следующий:"
   </dest>
   <voice>
-    *: "Следующий:"
+    *: "Следующий"
   </voice>
 </phrase>
 <phrase>
@@ -10438,11 +10047,11 @@
   </source>
   <dest>
     *: none
-    touchscreen: "OK"
+    touchscreen: "~OK"
   </dest>
   <voice>
     *: none
-    touchscreen: "OK"
+    touchscreen: "~OK"
   </voice>
 </phrase>
 <phrase>
@@ -10604,20 +10213,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_SCROLLBAR_POSITION
-  desc: in Settings -> General -> Display -> Status-/Scrollbar
-  user: core
-  <source>
-    *: "Scroll Bar Position"
-  </source>
-  <dest>
-    *: "Позиция полосы прокрутки"
-  </dest>
-  <voice>
-    *: "Позиция полосы прокрутки"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_REMOTE_STATUSBAR
   desc: in Settings -> General -> Display -> statusbar
   user: core
@@ -10691,20 +10286,6 @@
   </dest>
   <voice>
     *: "Обновление при остановке"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_INSERT_LAST_SHUFFLED
-  desc: in onplay menu.  insert a playlist randomly at end of dynamic playlist
-  user: core
-  <source>
-    *: "Insert Last Shuffled"
-  </source>
-  <dest>
-    *: "Добавить случайный к концу"
-  </dest>
-  <voice>
-    *: "Добавить случайный к концу"
   </voice>
 </phrase>
 <phrase>
@@ -11014,13 +10595,13 @@
 </phrase>
 <phrase>
   id: LANG_TAGNAVI_UNTAGGED
-  desc: "<untagged>" entry in tag browser
+  desc: "[untagged]" entry in tag browser
   user: core
   <source>
-    *: "<Untagged>"
+    *: "[Untagged]"
   </source>
   <dest>
-    *: "<Не тегированный>"
+    *: "[Не тегированный]"
   </dest>
   <voice>
     *: "Не тегированный"
@@ -11267,20 +10848,6 @@
   <voice>
     *: none
     usb_hid: "Мультимедиа"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_STATUSBAR_CUSTOM
-  desc: if this translation is compatible with LANG_CHANNEL_CUSTOM, then please use the same translation. it can be combined later then
-  user: core
-  <source>
-    *: "Custom"
-  </source>
-  <dest>
-    *: "Пользовательские"
-  </dest>
-  <voice>
-    *: "Пользовательские"
   </voice>
 </phrase>
 <phrase>
@@ -11619,20 +11186,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_SET_AS_START_DIR
-  desc: used in the onplay menu to set a starting browser dir
-  user: core
-  <source>
-    *: "Start File Browser Here"
-  </source>
-  <dest>
-    *: "Начинать показ файлов здесь"
-  </dest>
-  <voice>
-    *: "Начинать показ файлов здесь"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_FM_RSSI
   desc: Signal strength of a received FM station
   user: core
@@ -11729,25 +11282,11 @@
   </source>
   <dest>
     *: none
-    multidrive_usb: "USB: Скрыть внутренний диск"
+    multidrive_usb: "Скрыть внутренний диск USB"
   </dest>
   <voice>
     *: none
-    multidrive_usb: "USB: Скрыть внутренний диск"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_SET_AS_PLAYLISTCAT_DIR
-  desc: used in the onplay menu to set a playlist catalogue dir
-  user: core
-  <source>
-    *: "Set As Playlist Catalogue Directory"
-  </source>
-  <dest>
-    *: "Установить как папку каталога списков"
-  </dest>
-  <voice>
-    *: "Установить как папку каталога списков"
+    multidrive_usb: "Скрыть внутренний диск USB"
   </voice>
 </phrase>
 <phrase>
@@ -11793,20 +11332,6 @@
   </dest>
   <voice>
     *: "Перемотка назад на паузе"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_AUTOMATIC
-  desc: generic automatic
-  user: core
-  <source>
-    *: "Automatic"
-  </source>
-  <dest>
-    *: "Автоматич."
-  </dest>
-  <voice>
-    *: "Автоматически"
   </voice>
 </phrase>
 <phrase>
@@ -12342,7 +11867,7 @@
   desc: Selective Actions
   user: core
   <source>
-    *: "Seek"
+    *: "Exempt Seek"
   </source>
   <dest>
     *: "Перемотка"
@@ -12401,7 +11926,7 @@
   desc: Softlock behaviour setting
   user: core
   <source>
-    *: "Disable Notify"
+    *: "Disable Locked Reminders"
   </source>
   <dest>
     *: "Запрет оповещения"
@@ -12516,7 +12041,7 @@
   desc: Selective Actions
   user: core
   <source>
-    *: "Skip"
+    *: "Exempt Skip"
   </source>
   <dest>
     *: "Смена трека"
@@ -12593,20 +12118,6 @@
   </dest>
   <voice>
     *: "Разрешено"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_NO_VIEWERS
-  desc: text for splash to indicate that no viewers are available
-  user: core
-  <source>
-    *: "No viewers found"
-  </source>
-  <dest>
-    *: "Просмотрщиков не найдено"
-  </dest>
-  <voice>
-    *: "Просмотрщиков не найдено"
   </voice>
 </phrase>
 <phrase>
@@ -12712,7 +12223,7 @@
   desc: Selective Actions
   user: core
   <source>
-    *: "Play"
+    *: "Exempt Play"
   </source>
   <dest>
     *: "Воспроизведение или пауза"
@@ -13034,20 +12545,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_CLEAR_PLAYLIST
-  desc: in the pictureflow main menu
-  user: core
-  <source>
-    *: "Clear playlist"
-  </source>
-  <dest>
-    *: "Очистить список воспроизведения"
-  </dest>
-  <voice>
-    *: "Очистить список воспроизведения"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_HIDE_ALBUM_TITLE
   desc: in the pictureflow settings
   user: core
@@ -13091,7 +12588,7 @@
 </phrase>
 <phrase>
   id: LANG_DIRECT
-  desc: in the pictureflow settings
+  desc: in the pictureflow settings, also a volume adjustment mode
   user: core
   <source>
     *: "Direct"
@@ -13160,34 +12657,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_PLAYLIST_CLEARED
-  desc: in the pictureflow splash messages
-  user: core
-  <source>
-    *: "Playlist Cleared"
-  </source>
-  <dest>
-    *: "Список воспроизведения очищен"
-  </dest>
-  <voice>
-    *: "Список воспроизведения очищен"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_ADDED_TO_PLAYLIST
-  desc: in the pictureflow splash messages
-  user: core
-  <source>
-    *: "Added to playlist"
-  </source>
-  <dest>
-    *: "Добавлено к списку воспроизведения"
-  </dest>
-  <voice>
-    *: "Добавлено к списку воспроизведения"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_ERROR_WRITING_CONFIG
   desc: in the pictureflow splash messages
   user: core
@@ -13226,7 +12695,7 @@
     *: "Уровень 8: 1 ход / 15 мин."
   </dest>
   <voice>
-    *: "Уровень 8: 1 ход за 15 минут"
+    *: "Уровень 8, 1 ход за 15 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13338,7 +12807,7 @@
     *: "Уровень 3: 60 ходов / 30 min."
   </dest>
   <voice>
-    *: "Уровень 3: 60 ходов за 30 минут"
+    *: "Уровень 3, 60 ходов за 30 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13380,7 +12849,7 @@
     *: "Уровень 5: 40 ходов / 60 мин."
   </dest>
   <voice>
-    *: "Уровень 5: 40 ходов за 60 минут"
+    *: "Уровень 5, 40 ходов за 60 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13394,7 +12863,7 @@
     *: ""
   </dest>
   <voice>
-    *: "GNU Chess"
+    *: "GNU Шахматы"
   </voice>
 </phrase>
 <phrase>
@@ -13408,7 +12877,7 @@
     *: "Уровень 9: 1 ход / 60 мин."
   </dest>
   <voice>
-    *: "Уровень 9: 1 ход за 60 минут"
+    *: "Уровень 9, 1 ход за 60 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13573,16 +13042,16 @@
 </phrase>
 <phrase>
   id: LANG_PLAYTIME_REMAINING
-  desc: playing time screen
+  desc: deprecated
   user: core
   <source>
-    *: "Playlist remaining:"
+    *: ""
   </source>
   <dest>
-    *: "В списке осталось:"
+    *: ""
   </dest>
   <voice>
-    *: "В списке осталось"
+    *: ""
   </voice>
 </phrase>
 <phrase>
@@ -13610,7 +13079,7 @@
     *: "Уровень 4: 40 ходов / 30 мин."
   </dest>
   <voice>
-    *: "Уровень 4: 40 ходов за 30 минут"
+    *: "Уровень 4, 40 ходов за 30 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13784,7 +13253,7 @@
     *: "Думаю..."
   </dest>
   <voice>
-    *: ""
+    *: "Думаю"
   </voice>
 </phrase>
 <phrase>
@@ -13916,7 +13385,7 @@
     *: "Уровень 2: 60 ходов / 15 мин."
   </dest>
   <voice>
-    *: "Уровень 2: 60 ходов за 15 минут"
+    *: "Уровень 2, 60 ходов за 15 минут"
   </voice>
 </phrase>
 <phrase>
@@ -13972,7 +13441,7 @@
     *: "Уровень 1: 60 ходов / 5 мин."
   </dest>
   <voice>
-    *: "Уровень 1: 60 ходов за 5 минут"
+    *: "Уровень 1, 60 ходов за 5 минут"
   </voice>
 </phrase>
 <phrase>
@@ -14365,7 +13834,7 @@
     *: "Уровень 7: 40 ходов / 240 мин."
   </dest>
   <voice>
-    *: "Уровень 7: 40 ходов за 240 минут"
+    *: "Уровень 7, 40 ходов за 240 минут"
   </voice>
 </phrase>
 <phrase>
@@ -14641,7 +14110,7 @@
     *: "Уровень 10: 1 ход / 600 min."
   </dest>
   <voice>
-    *: "Уровень 10: 1 ход за 600 минут"
+    *: "Уровень 10, 1 ход за 600 минут"
   </voice>
 </phrase>
 <phrase>
@@ -14798,7 +14267,7 @@
     *: "Уровень 6: 40 ходов / 120 мин."
   </dest>
   <voice>
-    *: "Уровень 6: 40 ходов за 120 минут"
+    *: "Уровень 6, 40 ходов за 120 минут"
   </voice>
 </phrase>
 <phrase>
@@ -14942,62 +14411,6 @@
   </dest>
   <voice>
     *: "Время"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_ARTIST
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Artist]"
-  </source>
-  <dest>
-    *: "[Исполнитель]"
-  </dest>
-  <voice>
-    *: "Исполнитель"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_TITLE
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Title]"
-  </source>
-  <dest>
-    *: "[Название]"
-  </dest>
-  <voice>
-    *: "Название"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_ALBUM
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Album]"
-  </source>
-  <dest>
-    *: "[Альбом]"
-  </dest>
-  <voice>
-    *: "Альбом"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_DURATION
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Duration]"
-  </source>
-  <dest>
-    *: "[Продолжительность]"
-  </dest>
-  <voice>
-    *: "Продолжительность"
   </voice>
 </phrase>
 <phrase>
@@ -15645,20 +15058,6 @@
     es9218: "Низкая громкость"
   </voice>
 </phrase>
- <phrase>
-  id: LANG_CLEAR_LIST_AND_PLAY_NEXT
-  desc: in onplay menu.  Replace current playlist with selected tracks
-  user: core
-  <source>
-    *: "Clear List & Play Next"
-  </source>
-  <dest>
-    *: "Очистить список и играть следующий"
-  </dest>
-  <voice>
-    *: "Очистить список и играть следующий"
-  </voice>
-</phrase>
 <phrase>
   id: LANG_QUEUE_MENU
   desc: in onplay menu
@@ -15670,7 +15069,7 @@
     *: "Очередь..."
   </dest>
   <voice>
-    *: "Очередь..."
+    *: "Очередь"
   </voice>
 </phrase>
 <phrase>
@@ -15716,20 +15115,6 @@
   </voice>
 </phrase>
 <phrase>
-  id: LANG_CLEAR_LIST_AND_PLAY_SHUFFLED
-  desc: in onplay menu.  Replace current playlist with selected tracks in random order.
-  user: core
-  <source>
-    *: "Clear List & Play Shuffled"
-  </source>
-  <dest>
-    *: "Очистить список и играть в случайном порядке"
-  </dest>
-  <voice>
-    *: "Очистить список и играть в случайном порядке"
-  </voice>
-</phrase>
-<phrase>
   id: LANG_SOFTLOCK_DISABLE_ALL_NOTIFY
   desc: disable all softlock notifications
   user: core
@@ -15769,20 +15154,6 @@
   </dest>
   <voice>
     *: "Автоблокировка всегда"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PLAYLIST_RELOAD_AFTER_SAVE
-  desc: reload playlist after saving
-  user: core
-  <source>
-    *: "Reload After Saving"
-  </source>
-  <dest>
-    *: "Перезагрузить после сохранения"
-  </dest>
-  <voice>
-    *: "Перезагрузить после сохранения"
   </voice>
 </phrase>
 <phrase>
@@ -15936,132 +15307,6 @@
   <voice>
     *: none
     filter_roll_off: "Супермедленный"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_ALBUMARTIST
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Album Artist]"
-  </source>
-  <dest>
-    *: "[Исполнитель альбома]"
-  </dest>
-  <voice>
-    *: "Исполнитель альбома"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_GENRE
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Genre]"
-  </source>
-  <dest>
-    *: "[Жанр]"
-  </dest>
-  <voice>
-    *: "Жанр"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_COMMENT
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Comment]"
-  </source>
-  <dest>
-    *: "[Комментарий]"
-  </dest>
-  <voice>
-    *: "Комментарий"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_COMPOSER
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Composer]"
-  </source>
-  <dest>
-    *: "[Композитор]"
-  </dest>
-  <voice>
-    *: "Композитор"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_YEAR
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Year]"
-  </source>
-  <dest>
-    *: "[Год]"
-  </dest>
-  <voice>
-    *: "Год"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_TRACKNUM
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Tracknum]"
-  </source>
-  <dest>
-    *: "[Номер трека]"
-  </dest>
-  <voice>
-    *: "Номер трека"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_DISCNUM
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Discnum]"
-  </source>
-  <dest>
-    *: "[Номер диска]"
-  </dest>
-  <voice>
-    *: "Номер диска"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_FREQUENCY
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Frequency]"
-  </source>
-  <dest>
-    *: "[Частота]"
-  </dest>
-  <voice>
-    *: "Частота"
-  </voice>
-</phrase>
-<phrase>
-  id: LANG_PROPERTIES_BITRATE
-  desc: in properties plugin
-  user: core
-  <source>
-    *: "[Bitrate]"
-  </source>
-  <dest>
-    *: "[Битрейт]"
-  </dest>
-  <voice>
-    *: "Битрейт"
   </voice>
 </phrase>
 <phrase>
@@ -16353,18 +15598,18 @@
   user: core
   <source>
     *: none
-    ipodcolor,ipodnano1g,ipodvideo,ipod4g,ipodmini1g,ipodmini2g: "Clear settings when hold switch is on during startup"
-    clear_settings_on_hold, iriverh10: "Clear settings when reset button is held during startup"
+    clear_settings_on_hold,iriverh10: "Clear settings when reset button is held during startup"
+    ipod4g,ipodcolor,ipodmini1g,ipodmini2g,ipodnano1g,ipodvideo: "Clear settings when hold switch is on during startup"
   </source>
   <dest>
     *: none
-    ipodcolor,ipodnano1g,ipodvideo,ipod4g,ipodmini1g,ipodmini2g: "Сбросить настройки при включенной блокировке во время загрузки"
-    clear_settings_on_hold, iriverh10: "Сбросит настройки при нажатой кнопке сброса во время загрузки"
+    clear_settings_on_hold,iriverh10: "Сбросит настройки при нажатой кнопке сброса во время загрузки"
+    ipod4g,ipodcolor,ipodmini1g,ipodmini2g,ipodnano1g,ipodvideo: "Сбросить настройки при включенной блокировке во время загрузки"
   </dest>
   <voice>
     *: none
-    ipodcolor,ipodnano1g,ipodvideo,ipod4g,ipodmini1g,ipodmini2g: "Сбросить настройки при включенной блокировке во время загрузки"
-    clear_settings_on_hold, iriverh10: "Сбросит настройки при нажатой кнопке сброса во время загрузки"
+    clear_settings_on_hold,iriverh10: "Сбросит настройки при нажатой кнопке сброса во время загрузки"
+    ipod4g,ipodcolor,ipodmini1g,ipodmini2g,ipodnano1g,ipodvideo: "Сбросить настройки при включенной блокировке во время загрузки"
   </voice>
 </phrase>
 <phrase>
@@ -16392,7 +15637,7 @@
     *: "Установить как..."
   </dest>
   <voice>
-    *: "Установить как..."
+    *: "Установить как"
   </voice>
 </phrase>
 <phrase>
@@ -16448,10 +15693,10 @@
     *: "Add to Playlist..."
   </source>
   <dest>
-    *: "Добавить к списку проигрывания..."
+    *: "Добавить к списку воспроизведения.."
   </dest>
   <voice>
-    *: "Добавить к списку проигрывания..."
+    *: "Добавить к списку воспроизведения"
   </voice>
 </phrase>
 <phrase>
@@ -16476,10 +15721,10 @@
     *: "Playing Next..."
   </source>
   <dest>
-    *: "Дальнейшее проигрывание..."
+    *: "Воспроизвести далее..."
   </dest>
   <voice>
-    *: "Дальнейшее проигрывание..."
+    *: "Воспроизвести далее"
   </voice>
 </phrase>
 <phrase>
@@ -16629,5 +15874,633 @@
   </dest>
   <voice>
     *: "Русский"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_RANDOM_SHUFFLE_RANDOM_SELECTIVE_SONGS_SUMMARY
+  desc: a summary splash screen that appear on the database browser when you try to create a playlist from the database browser that exceeds your system limit
+  user: core
+  <source>
+    *: "Selection too big, %d random tracks will be selected"
+  </source>
+  <dest>
+    *: "Выбор слишком велик, из него будут выбраны %d случайных треков"
+  </dest>
+  <voice>
+    *: "Выбор слишком велик, из него будет выбрано меньше случайных треков"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_FILTER_SHORT_SHARP
+  desc: in sound settings
+  user: core
+  <source>
+    *: none
+    filter_roll_off: "Short Sharp"
+  </source>
+  <dest>
+    *: none
+    filter_roll_off: "Короткий Острый"
+  </dest>
+  <voice>
+    *: none
+    filter_roll_off: "Короткий Острый"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_FILTER_SHORT_SLOW
+  desc: in sound settings
+  user: core
+  <source>
+    *: none
+    filter_roll_off: "Short Slow"
+  </source>
+  <dest>
+    *: none
+    filter_roll_off: "Короткий Медленный"
+  </dest>
+  <voice>
+    *: none
+    filter_roll_off: "Короткий Медленный"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_MIKMOD_HQMIXER
+  desc: in mikmod settings menu
+  user: core
+  <source>
+    *: "HQ Mixer"
+    lowmem: none
+  </source>
+  <dest>
+    *: "HQ Микшер"
+    lowmem: none
+  </dest>
+  <voice>
+    *: "High Quality Микшер"
+    lowmem: none
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_MIKMOD_SAMPLERATE
+  desc: in mikmod settings menu
+  user: core
+  <source>
+    *: "Sample Rate"
+    lowmem: none
+  </source>
+  <dest>
+    *: "Частота дискретизации"
+    lowmem: none
+  </dest>
+  <voice>
+    *: "Частота дискретизации"
+    lowmem: none
+  </voice>
+</phrase>
+<phrase>
+  id: VOICE_NUMERIC_TENS_SWAP_SEPARATOR
+  desc: voice only, for speaking numbers in languages that swap the tens and ones fields. Leave blank for languages that do not need it, such as English ("231" => "two hundred thirty one") but other languages may speak it as "two hundred one [AND] thirty"
+  user: core
+  <source>
+    *: ""
+  </source>
+  <dest>
+    *: ""
+  </dest>
+  <voice>
+    *: ""
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_VOICED_DATE_FORMAT
+  desc: format string for how dates will be read back. Y == 4-digit year, A == month name, m == numeric month, d == numeric day. For example, "AdY" will read "January 21 2021"
+  user: core
+  <source>
+    *: "dAY"
+  </source>
+  <dest>
+    *: "~dAY"
+  </dest>
+  <voice>
+    *: ""
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DATABASE_DIR
+  desc: in database settings menu
+  user: core
+  <source>
+    *: "Database Directory"
+  </source>
+  <dest>
+    *: "Каталог базы данных"
+  </dest>
+  <voice>
+    *: "Каталог базы данных"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_REMOVE_QUEUED_TRACKS
+  desc: Confirmation dialog
+  user: core
+  <source>
+    *: "Remove Queued Tracks?"
+  </source>
+  <dest>
+    *: "Удалять треки, поставленные в очередь?"
+  </dest>
+  <voice>
+    *: "Удалять треки, поставленные в очередь?"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_QUICK_IGNORE_DIRACHE
+  desc: in Settings
+  user: core
+  <source>
+    *: "Quick (Ignore Directory Cache)"
+  </source>
+  <dest>
+    *: "Quick  (игнорировать кэш каталогов)"
+  </dest>
+  <voice>
+    *: "Quick (игнорировать кэш каталогов)"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_WPS
+  desc: in Settings
+  user: core
+  <source>
+    *: "What's Playing Screen"
+  </source>
+  <dest>
+    *: "Что происходит на экране воспроизведения"
+  </dest>
+  <voice>
+    *: "Что происходит на экране воспроизведения"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DEFAULT_BROWSER
+  desc: in Settings
+  user: core
+  <source>
+    *: "Default Browser"
+  </source>
+  <dest>
+    *: "Браузер по умолчанию"
+  </dest>
+  <voice>
+    *: "Браузер по умолчанию"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_AMAZE_MENU
+  desc: Amaze game
+  user: core
+  <source>
+    *: "Amaze Main Menu"
+  </source>
+  <dest>
+    *: "Главное меню Amaze"
+  </dest>
+  <voice>
+    *: "Главное меню Amaze"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_SET_MAZE_SIZE
+  desc: Maze size in Amaze game
+  user: core
+  <source>
+    *: "Set Maze Size"
+  </source>
+  <dest>
+    *: "Установить размер  Maze "
+  </dest>
+  <voice>
+    *: "Установить размер  Maze "
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_VIEW_MAP
+  desc: Map in Amaze game
+  user: core
+  <source>
+    *: "View Map"
+  </source>
+  <dest>
+    *: "Посмотреть карту"
+  </dest>
+  <voice>
+    *: "Посмотреть карту"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_SHOW_COMPASS
+  desc: Compass in Amaze game
+  user: core
+  <source>
+    *: "Show Compass"
+  </source>
+  <dest>
+    *: "Показать компас"
+  </dest>
+  <voice>
+    *: "Показать компас"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_SHOW_MAP
+  desc: Map in Amaze game
+  user: core
+  <source>
+    *: "Show Map"
+  </source>
+  <dest>
+    *: "Показать карту"
+  </dest>
+  <voice>
+    *: "Показать карту"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_REMEMBER_PATH
+  desc: Map in Amaze game
+  user: core
+  <source>
+    *: "Remember Path"
+  </source>
+  <dest>
+    *: "Запомнить путь"
+  </dest>
+  <voice>
+    *: "Запомнить путь"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_USE_LARGE_TILES
+  desc: Map in Amaze game
+  user: core
+  <source>
+    *: "Use Large Tiles"
+  </source>
+  <dest>
+    *: "Используйте большие  Tiles"
+  </dest>
+  <voice>
+    *: "Используйте большие Tiles"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_SHOW_SOLUTION
+  desc: Map in Amaze game
+  user: core
+  <source>
+    *: "Show Solution"
+  </source>
+  <dest>
+    *: "Показать решение"
+  </dest>
+  <voice>
+    *: "Показать решение"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_QUIT_WITHOUT_SAVING
+  desc:
+  user: core
+  <source>
+    *: "Quit without saving"
+  </source>
+  <dest>
+    *: "Выйти без сохранения"
+  </dest>
+  <voice>
+    *: "Выйти без сохранения"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_GENERATING_MAZE
+  desc: Amaze game
+  user: core
+  <source>
+    *: "Generating maze..."
+  </source>
+  <dest>
+    *: "Создать лабиринт"
+  </dest>
+  <voice>
+    *: "Создать лабиринт"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_YOU_WIN
+  desc: Success in game
+  user: core
+  <source>
+    *: "You win!"
+  </source>
+  <dest>
+    *: "Ты победил"
+  </dest>
+  <voice>
+    *: "Ты победил"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_YOU_CHEATED
+  desc: Cheated in game
+  user: core
+  <source>
+    *: "You cheated!"
+  </source>
+  <dest>
+    *: "Ты обманул"
+  </dest>
+  <voice>
+    *: "Ты обманул"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DIFFICULTY_EASY
+  desc: Game difficulty
+  user: core
+  <source>
+    *: "Easy"
+  </source>
+  <dest>
+    *: "Легкий"
+  </dest>
+  <voice>
+    *: "Легкий"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DIFFICULTY_MEDIUM
+  desc: Game difficulty
+  user: core
+  <source>
+    *: "Medium"
+  </source>
+  <dest>
+    *: "Средний"
+  </dest>
+  <voice>
+    *: "Средний"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DIFFICULTY_HARD
+  desc: Game difficulty
+  user: core
+  <source>
+    *: "Hard"
+  </source>
+  <dest>
+    *: "Сложный"
+  </dest>
+  <voice>
+    *: "Сложный"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DIFFICULTY_EXPERT
+  desc: Game difficulty
+  user: core
+  <source>
+    *: "Expert"
+  </source>
+  <dest>
+    *: "Эксперт"
+  </dest>
+  <voice>
+    *: "Эксперт"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_STEREOSW_MODE
+  desc: Stereo Switch Mode
+  user: core
+  <source>
+    *: "Stereo Switch Mode"
+  </source>
+  <dest>
+    *: "Режим переключения стерео"
+  </dest>
+  <voice>
+    *: "Режим переключения стерео"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_REVERSE
+  desc: in settings_menu
+  user: core
+  <source>
+    *: "Reverse"
+  </source>
+  <dest>
+    *: "Обратный / Обратная сторона"
+  </dest>
+  <voice>
+    *: "Обратный / Обратная сторона"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_ALWAYS_ZERO
+  desc: in settings_menu
+  user: core
+  <source>
+    *: "Always 0"
+  </source>
+  <dest>
+    *: "Всегда 0"
+  </dest>
+  <voice>
+    *: "Всегда 0"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_ALWAYS_ONE
+  desc: in settings_menu
+  user: core
+  <source>
+    *: "Always 1"
+  </source>
+  <dest>
+    *: "Всегда 1"
+  </dest>
+  <voice>
+    *: "Всегда 1"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_LEGAL_NOTICES
+  desc: in system menu
+  user: core
+  <source>
+    *: "Legal Notices"
+  </source>
+  <dest>
+    *: "официальное уведомление"
+  </dest>
+  <voice>
+    *: "официальное уведомление"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_ERROR_FORMATSTR
+  desc: for general use
+  user: core
+  <source>
+    *: "Error: %s"
+  </source>
+  <dest>
+    *: "Ошибка: %s"
+  </dest>
+  <voice>
+    *: "Ошибка"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_MIKMOD_SETTINGS
+  desc: mikmod plugin
+  user: core
+  <source>
+    *: "Mikmod Settings"
+  </source>
+  <dest>
+    *: "Mikmod Настройки"
+  </dest>
+  <voice>
+    *: "Mik mod Настройки"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_MIKMOD_MENU
+  desc: mikmod plugin
+  user: core
+  <source>
+    *: "Mikmod Menu"
+  </source>
+  <dest>
+    *: "Mikmod Меню"
+  </dest>
+  <voice>
+    *: "Mik mod Меню"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_CHESSBOX_MENU
+  desc: chessbox plugin
+  user: core
+  <source>
+    *: "Chessbox Menu"
+  </source>
+  <dest>
+    *: "Шахматы меню"
+  </dest>
+  <voice>
+    *: "Шахматы меню"
+  </voice>
+</phrase>
+<phrase>
+  id: VOICE_INVALID_VOICE_FILE
+  desc: played if the voice file fails to load
+  user: core
+  <source>
+    *: ""
+  </source>
+  <dest>
+    *: ""
+  </dest>
+  <voice>
+    *: "Недопустимый голосовой файл"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_PERCENT_FORMAT
+  desc: percent formatting ( `10%` is default ,  for `10 %` use '%ld %%' , for `%10` use '%%%ld' and so on)
+  user: core
+  <source>
+    *: "%ld%%"
+  </source>
+  <dest>
+    *: "~%ld%%"
+  </dest>
+  <voice>
+    *: none
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_CHOOSE_FILE
+  desc: file_picker plugin ask user to select a file
+  user: core
+  <source>
+    *: "Choose File"
+  </source>
+  <dest>
+    *: "Выберите файл"
+  </dest>
+  <voice>
+    *: "Выберите файл"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISABLE_MAINMENU_SCROLLING
+  desc: Disable main menu scrolling
+  user: core
+  <source>
+    *: "Disable main menu scrolling"
+  </source>
+  <dest>
+    *: "Отключить прокрутку главного меню"
+  </dest>
+  <voice>
+    *: "Отключить прокрутку главного меню"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_REMAINING
+  desc: Playing Time
+  user: core
+  <source>
+    *: "Remaining"
+  </source>
+  <dest>
+    *: "Оставшийся"
+  </dest>
+  <voice>
+    *: "Оставшийся"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISPLAY_TITLEALBUM_FROMTAGS
+  desc: track display options
+  user: core
+  <source>
+    *: "Title & Album from ID3 tags"
+  </source>
+  <dest>
+    *: "Название и альбом по тегам ID3"
+  </dest>
+  <voice>
+    *: "Название и альбом по тегам"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_DISPLAY_TITLE_FROMTAGS
+  desc: track display options
+  user: core
+  <source>
+    *: "Title from ID3 tags"
+  </source>
+  <dest>
+    *: "Название из ID3-тегов"
+  </dest>
+  <voice>
+    *: "Название из тегов"
   </voice>
 </phrase>

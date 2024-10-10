@@ -195,8 +195,14 @@ static void LCDFN(scroll_worker)(void)
         s = &si->scroll[index];
 
         /* check pause */
-        if (TIME_BEFORE(current_tick, s->start_tick))
+        if (TIME_BEFORE(current_tick, s->start_tick)) {
             continue;
+        }
+
+        if (global_settings.disable_mainmenu_scrolling && get_current_activity() == ACTIVITY_MAINMENU) {
+            // No scrolling on the main menu if disabled (to not break themes with lockscreens)
+            continue;
+        }
 
         s->start_tick = current_tick;
 

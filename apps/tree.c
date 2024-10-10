@@ -421,7 +421,7 @@ static int update_dir(void)
     {
         tc.sort_dir = global_settings.sort_dir;
         /* if the tc.currdir has been changed, reload it ...*/
-        if (strncmp(tc.currdir, lastdir, sizeof(lastdir)) || reload_dir)
+        if (reload_dir || strncmp(tc.currdir, lastdir, sizeof(lastdir)))
         {
             if (ft_load(&tc, NULL) < 0)
                 return -1;
@@ -584,14 +584,23 @@ char* get_current_file(char* buffer, size_t buffer_len)
     struct entry *entry = tree_get_entry_at(&tc, tc.selected_item);
     if (entry && getcwd(buffer, buffer_len))
     {
-        if (tc.dirlength)
+        if (!tc.dirlength)
+            return buffer;
+
+        size_t usedlen = strlen(buffer);
+
+        if (usedlen + 2 < buffer_len) /* ensure enough room for '/' + '\0' */
         {
-            if (buffer[strlen(buffer)-1] != '/')
-                strlcat(buffer, "/", buffer_len);
-            if (strlcat(buffer, entry->name, buffer_len) >= buffer_len)
-                return NULL;
+            if (buffer[usedlen-1] != '/')
+            {
+                buffer[usedlen] = '/';
+                /* strmemccpy will zero terminate if we run out of space after */
+                usedlen++;
+            }
+            buffer_len -= usedlen;
+            if (strmemccpy(buffer + usedlen, entry->name, buffer_len) != NULL)
+                return buffer;
         }
-        return buffer;
     }
     return NULL;
 }
@@ -735,6 +744,20 @@ static int dirbrowse(void)
         oldbutton = button;
         gui_synclist_do_button(&tree_lists, &button);
         tc.selected_item = gui_synclist_get_sel_pos(&tree_lists);
+        int customaction = ONPLAY_NO_CUSTOMACTION;
+        bool do_restore_display = true;
+        #ifdef HAVE_TAGCACHE
+            if (id3db && (button == ACTION_STD_OK || button == ACTION_STD_CONTEXT))
+            {
+                customaction = tagtree_get_custom_action(&tc);
+                if (customaction == ONPLAY_CUSTOMACTION_SHUFFLE_SONGS)
+                {
+                    /* The code to insert shuffled is on the context branch of the switch so we always go here */
+                    button = ACTION_STD_CONTEXT;
+                    do_restore_display = false;
+                }
+            }
+        #endif
         switch ( button ) {
             case ACTION_STD_OK:
                 /* nothing to do if no files to display */
@@ -773,7 +796,7 @@ static int dirbrowse(void)
                     default:
                         break;
                 }
-                restore = true;
+                restore = do_restore_display;
                 break;
 
             case ACTION_STD_CANCEL:
@@ -798,12 +821,12 @@ static int dirbrowse(void)
                     if (ft_exit(&tc) == 3)
                         exit_func = true;
 
-                restore = true;
+                restore = do_restore_display;
                 break;
 
             case ACTION_TREE_STOP:
                 if (list_stop_handler())
-                    restore = true;
+                    restore = do_restore_display;
                 break;
 
             case ACTION_STD_MENU:
@@ -851,7 +874,7 @@ static int dirbrowse(void)
                         skin_update(CUSTOM_STATUSBAR, i, SKIN_REFRESH_ALL);
                 }
 
-                restore = true;
+                restore = do_restore_display;
                 break;
             }
 #endif
@@ -872,7 +895,7 @@ static int dirbrowse(void)
                     break;
 
                 if(!numentries)
-                    onplay_result = onplay(NULL, 0, curr_context, hotkey);
+                    onplay_result = onplay(NULL, 0, curr_context, hotkey, customaction);
                 else {
 #ifdef HAVE_TAGCACHE
                     if (id3db)
@@ -902,7 +925,7 @@ static int dirbrowse(void)
                         ft_assemble_path(buf, sizeof(buf), currdir, entry->name);
 
                     }
-                    onplay_result = onplay(buf, attr, curr_context, hotkey);
+                    onplay_result = onplay(buf, attr, curr_context, hotkey, customaction);
                 }
                 switch (onplay_result)
                 {
@@ -911,7 +934,7 @@ static int dirbrowse(void)
                         break;
 
                     case ONPLAY_OK:
-                        restore = true;
+                        restore = do_restore_display;
                         break;
 
                     case ONPLAY_RELOAD_DIR:
@@ -988,7 +1011,7 @@ static int dirbrowse(void)
 
             lastfilter = *tc.dirfilter;
             lastsortcase = global_settings.sort_case;
-            restore = true;
+            restore = do_restore_display;
         }
 
         if (exit_func)
