@@ -1783,6 +1783,10 @@ void pcm_play_unlock(void)
     \group sound
     \description
 
+const struct pcm_sink_caps* pcm_current_sink_caps(enum pcm_sink_ids sink)
+    \group sound
+    \description
+
 void pcm_record_data(pcm_rec_callback_type more_ready, pcm_status_callback_type status_cb, void *start, size_t size)
     \group sound
     \conditions (defined(HAVE_RECORDING))

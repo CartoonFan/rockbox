@@ -93,6 +93,7 @@ int plugin_open(const char *plugin, const char *parameter);
 #include "misc.h"
 #include "pathfuncs.h"
 #include "pcm_mixer.h"
+#include "pcm_sink.h"
 #include "dsp-util.h"
 #include "dsp_core.h"
 #include "dsp_proc_settings.h"
@@ -745,6 +746,7 @@ struct plugin_api {
     void (*pcm_apply_settings)(void);
     void (*pcm_play_lock)(void);
     void (*pcm_play_unlock)(void);
+    const struct pcm_sink_caps* (*pcm_current_sink_caps)(void);
     void (*beep_play)(unsigned int frequency, unsigned int duration,
                       unsigned int amplitude);
 #ifdef HAVE_RECORDING
