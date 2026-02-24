@@ -453,6 +453,13 @@ int ft_load(struct tree_context* c, const char* tempdir)
         check_file_thumbnails(c); /* map .talk to ours */
 
     tree_unlock_cache(c);
+
+    if (global_settings.keep_directory)
+    {
+        path_append(global_status.browse_last_folder, c->currdir, PA_SEP_HARD,
+                    sizeof(global_status.browse_last_folder));
+    }
+
     return 0;
 }
 static void ft_load_font(char *file)

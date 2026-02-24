@@ -17029,3 +17029,17 @@
     general_purpose_led: "Use LED indicators"
   </voice>
 </phrase>
+<phrase>
+  id: LANG_KEEP_DIRECTORY
+  desc: file browser setting
+  user: core
+  <source>
+    *: "Always remember last folder"
+  </source>
+  <dest>
+    *: "Always remember last folder"
+  </dest>
+  <voice>
+    *: "Always remember last folder"
+  </voice>
+</phrase>

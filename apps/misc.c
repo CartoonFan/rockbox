@@ -2039,6 +2039,12 @@ void validate_start_directory_init(void) /* INIT_ATTR */
         path_append(dirpath, PATH_ROOTSTR,
             PA_SEP_HARD, sizeof(global_settings.start_directory));
     }
+
+    if (!global_settings.keep_directory) /* reset to root / if !keep_directory */
+    {
+        path_append(global_status.browse_last_folder, PATH_ROOTSTR, PA_SEP_HARD,
+                    sizeof(global_status.browse_last_folder));
+    }
 }
 
 #endif /* ndef __PCTOOL__ */

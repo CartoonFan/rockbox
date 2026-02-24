@@ -199,6 +199,7 @@ static int clear_start_directory(void)
     splash(HZ, ID2P(LANG_RESET_DONE_CLEAR));
     return false;
 }
+MENUITEM_SETTING(keep_directory, &global_settings.keep_directory, NULL);
 MENUITEM_FUNCTION(clear_start_directory_item, 0, ID2P(LANG_RESET_START_DIR),
                   clear_start_directory, NULL, Icon_file_view_menu);
 
@@ -209,6 +210,7 @@ MAKE_MENU(file_menu, ID2P(LANG_FILE), filemenu_callback, Icon_file_view_menu,
                 &sort_case, &sort_dir, &sort_file, &interpret_numbers,
                 &dirfilter, &show_filename_ext, &browse_current,
                 &show_path_in_browser,
+                &keep_directory,
                 &clear_start_directory_item
 #ifdef HAVE_HOTKEY
                 ,&hotkey_tree_item

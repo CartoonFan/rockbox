@@ -365,6 +365,7 @@ struct system_status
     int font_id[NB_SCREENS]; /* font id of the settings font for each screen */
 
     bool resume_modified; /* playlist is modified (=> warn before erase) */
+    char browse_last_folder[MAX_PATH];/* only saved if keep_directory = true */
 };
 
 struct user_settings
@@ -893,6 +894,7 @@ struct user_settings
 
     char start_directory[MAX_PATHNAME+1];
     /* Has the root been customized from the .cfg file? false = no, true = loaded from cfg */
+    bool keep_directory;  /* this saves the last path visited in the file browser */
     bool root_menu_customized;
 #ifdef HAVE_QUICKSCREEN
     bool shortcuts_replaces_qs;

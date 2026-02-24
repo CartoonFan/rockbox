@@ -148,6 +148,13 @@
 #define SYSTEM_STATUS(flags,var,default,name)                \
             {flags|F_RESUMESETTING|F_T_INT, &global_status.var,-1, \
              INT(default), name, UNUSED}
+
+#define SYSTEM_STATUS_TEXT_SETTING(flags,var,name,default,prefix,suffix) \
+            {flags|F_RESUMESETTING|F_T_UCHARPTR, &global_status.var,-1,  \
+                CHARPTR(default),name,                                   \
+                {.filename_setting=                                      \
+                    (struct filename_setting[]){                         \
+                        {prefix,suffix,sizeof(global_status.var)}}} }
 /* system_status settings items will be saved to resume.cfg
    Use for int which use the set_sound() function to set them
    These items WILL be included in the users exported settings files
@@ -1498,6 +1505,9 @@ const struct settings_list settings[] = {
 #endif /* HAVE_DISK_STORAGE */
     /* browser */
     TEXT_SETTING(0, start_directory, "start directory", "/", NULL, NULL),
+    SYSTEM_STATUS_TEXT_SETTING(0, browse_last_folder, "last folder", "/", NULL, NULL),
+    OFFON_SETTING(0, keep_directory, LANG_KEEP_DIRECTORY, false, "keep directory", NULL),
+
     CHOICE_SETTING(0, dirfilter, LANG_FILTER, SHOW_SUPPORTED, "show files",
                    "all,supported,music,playlists", NULL, 4, ID2P(LANG_ALL),
                    ID2P(LANG_FILTER_SUPPORTED), ID2P(LANG_FILTER_MUSIC),

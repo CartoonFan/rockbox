@@ -628,6 +628,11 @@ static bool settings_write_config(const char* filename, int options)
             case SETTINGS_SAVE_RESUMEINFO:
                 if (!(setting->flags & F_RESUMESETTING))
                     continue;
+                if (setting->setting == &global_status.browse_last_folder
+                   && (!global_settings.keep_directory))
+                {
+                        continue;
+                }
                 break;
             case SETTINGS_SAVE_ALL:
             {
