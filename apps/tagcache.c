@@ -3549,8 +3549,8 @@ static bool commit(void)
             tcrc_buffer_unlock();
         }
 
-        /* Reload tagcache. */
-        if (tc_stat.ramcache_allocated > 0)
+        /* Reload tagcache only if we committed new entries */
+        if (tc_stat.ramcache_allocated > 0 && tch.entry_count > 0)
             tagcache_start_scan();
 #endif /* HAVE_TC_RAMCACHE */
 
