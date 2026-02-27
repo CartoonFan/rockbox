@@ -26,6 +26,4 @@
  * when changing the volume */
 AUDIOHW_SETTING(VOLUME, "dB", 1, 5, -790, 0, -200);
 
-AUDIOHW_SETTING(MIC_GAIN, "dB", 0, 1, 0, 63, 12);
-
 #endif /* __ECHOPLAYER_CODEC_H__ */
