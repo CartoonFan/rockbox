@@ -1490,7 +1490,7 @@
     *: "Replaygain Type"
   </source>
   <dest>
-    *: "použiť zosilnenie"
+    *: "Použiť zosilnenie"
   </dest>
   <voice>
     *: "Použiť zosilnenie"
@@ -2335,7 +2335,7 @@
   </dest>
   <voice>
     *: none
-    backlight_brightness: "jas"
+    backlight_brightness: "Jas"
   </voice>
 </phrase>
 <phrase>
@@ -3729,7 +3729,7 @@
     *: "Jún"
   </dest>
   <voice>
-    *: "jún"
+    *: "Jún"
   </voice>
 </phrase>
 <phrase>
@@ -4237,10 +4237,10 @@
     *: ".talk Clip"
   </source>
   <dest>
-    *: ".talk mp3 klip"
+    *: ".talk klip"
   </dest>
   <voice>
-    *: "talk mp3 klip"
+    *: "talk klip"
   </voice>
 </phrase>
 <phrase>
@@ -5399,11 +5399,11 @@
   </source>
   <dest>
     *: none
-    recording: "Pri trvaní aspoň"
+    recording: "pri trvaní aspoň"
   </dest>
   <voice>
     *: none
-    recording: "Pri trvaní aspoň"
+    recording: "pri trvaní aspoň"
   </voice>
 </phrase>
 <phrase>
@@ -6941,7 +6941,7 @@
     *: "Pauza"
   </dest>
   <voice>
-    *: "pauza"
+    *: "Pauza"
   </voice>
 </phrase>
 <phrase>
@@ -10911,7 +10911,7 @@
   </dest>
   <voice>
     *: none
-    gigabeats,samsungypr1: "Šírka pásma "
+    gigabeats,samsungypr1: "Šírka pásma"
   </voice>
 </phrase>
 <phrase>
@@ -10970,10 +10970,10 @@
     *: "Force"
   </source>
   <dest>
-    *: "vnútiť"
+    *: "Vnútiť"
   </dest>
   <voice>
-    *: "vnútiť"
+    *: "Vnútiť"
   </voice>
 </phrase>
 <phrase>
@@ -12149,7 +12149,7 @@
     *: "Predchádzajúca stopa"
   </dest>
   <voice>
-    *: "predchádzajúca stopa"
+    *: "Predchádzajúca stopa"
   </voice>
 </phrase>
 <phrase>
@@ -12174,7 +12174,7 @@
     *: "Number of Players"
   </source>
   <dest>
-    *: "počet hráčov"
+    *: "Počet hráčov"
   </dest>
   <voice>
     *: "Počet hráčov"
@@ -12261,10 +12261,10 @@
     *: "Next Track"
   </source>
   <dest>
-    *: "ďalšia stopa"
+    *: "Nasledujúca stopa"
   </dest>
   <voice>
-    *: "Ďalšia stopa"
+    *: "Nasledujúca stopa"
   </voice>
 </phrase>
 <phrase>
@@ -12407,10 +12407,10 @@
     *: "Cannot restart playback"
   </source>
   <dest>
-    *: "nemožno reštartovať prehrávanie"
+    *: "Nemožno reštartovať prehrávanie"
   </dest>
   <voice>
-    *: "nemožno reštartovať prehrávanie"
+    *: "Nemožno reštartovať prehrávanie"
   </voice>
 </phrase>
 <phrase>
@@ -12578,10 +12578,10 @@
     *: "2 Key Control"
   </source>
   <dest>
-    *: "ovládanie dvoma tlačidlami"
+    *: "Ovládanie dvoma tlačidlami"
   </dest>
   <voice>
-    *: "ovládanie dvoma tlačidlami"
+    *: "Ovládanie dvoma tlačidlami"
   </voice>
 </phrase>
 <phrase>
@@ -12741,7 +12741,7 @@
     *: "Priamy"
   </dest>
   <voice>
-    *: "priamy"
+    *: "Priamy"
   </voice>
 </phrase>
 <phrase>
@@ -12770,11 +12770,11 @@
     lowmem: none
   </source>
   <dest>
-    *: "hodnoty eq"
+    *: "Hodnoty eq"
     lowmem: none
   </dest>
   <voice>
-    *: "hodnoty výšok a hĺbok"
+    *: "Hodnoty výšok a hĺbok"
     lowmem: none
   </voice>
 </phrase>
@@ -12817,7 +12817,7 @@
     *: ""
   </dest>
   <voice>
-    *: "kôň"
+    *: "Kôň"
   </voice>
 </phrase>
 <phrase>
@@ -12929,10 +12929,10 @@
     *: "Move Item Down"
   </source>
   <dest>
-    *: "posuň položku nadol"
+    *: "Posuň položku nadol"
   </dest>
   <voice>
-    *: "posuň položku nadol"
+    *: "Posuň položku nadol"
   </voice>
 </phrase>
 <phrase>
@@ -12957,10 +12957,10 @@
     *: "Worm Speed"
   </source>
   <dest>
-    *: "rýchlosť worma"
+    *: "Rýchlosť worma"
   </dest>
   <voice>
-    *: "rýchlosť worma"
+    *: "Rýchlosť worma"
   </voice>
 </phrase>
 <phrase>
@@ -13283,7 +13283,7 @@
   </dest>
   <voice>
     *: none
-    es9018: "krátky"
+    es9018: "Krátky"
   </voice>
 </phrase>
 <phrase>
@@ -13358,11 +13358,11 @@
   </source>
   <dest>
     *: none
-    recording: "priečinok nahrávok"
+    recording: "Priečinok nahrávok"
   </dest>
   <voice>
     *: none
-    recording: "priečinok nahrávok"
+    recording: "Priečinok nahrávok"
   </voice>
 </phrase>
 <phrase>
@@ -13839,10 +13839,10 @@
     *: "Out of Control"
   </source>
   <dest>
-    *: "mimo rozsah"
+    *: "Mimo rozsahu"
   </dest>
   <voice>
-    *: "mimo rozsah"
+    *: "Mimo rozsahu"
   </voice>
 </phrase>
 <phrase>
@@ -14067,11 +14067,11 @@
     lowmem: none
   </source>
   <dest>
-    *: "nastaviť čas obnovenia (min)"
+    *: "Nastaviť čas obnovenia (min)"
     lowmem: none
   </dest>
   <voice>
-    *: "nastaviť čas obnovenia"
+    *: "Nastaviť čas obnovenia"
     lowmem: none
   </voice>
 </phrase>
@@ -14086,7 +14086,7 @@
     *: ""
   </dest>
   <voice>
-    *: "stlačte play pre spustenie testu batérie, alebo stop pre zrušenie"
+    *: "Stlačte play pre spustenie testu batérie, alebo stop pre zrušenie"
   </voice>
 </phrase>
 <phrase>
@@ -14098,7 +14098,7 @@
     lowmem: none
   </source>
   <dest>
-    *: "preskočiť frejmy"
+    *: "Preskočiť frejmy"
     lowmem: none
   </dest>
   <voice>
@@ -14393,7 +14393,7 @@
   user: core
   <source>
     *: "Press LEFT to cancel."
-    android,hifietma*,zenvision: "Press BACK to cancel."
+    android,hifietma*: "Press BACK to cancel."
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Press POWER to cancel."
     ihifi760,ihifi960: "Double tap RETURN to cancel."
     ihifi770,ihifi770c,ihifi800: "Press HOME to cancel."
@@ -14409,7 +14409,7 @@
   <dest>
     *: "Stlačte LEFT pre zrušenie"
     android: "Stlačte späť pre zrušenie"
-    hifietma*,zenvision: "Stlačte BACK pre zrušenie"
+    hifietma*: "Stlačte BACK pre zrušenie"
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Stlačte POWER pre zrušenie"
     ihifi760,ihifi960: "Poklepte RETURN pre zrušenie"
     ihifi770,ihifi770c,ihifi800: "Stlačte HOME pre zrušenie"
@@ -14417,7 +14417,7 @@
     mpiohd200: "Poklepte REC pre zrušenie"
     mpiohd300: "Poklepte MENU pre zrušenie"
     rx27generic: "Stlačte VOLUME pre zrušenie"
-    sonynwza860: "mapa klávesov nekompletná"
+    sonynwza860: "Mapa klávesov nekompletná"
     touchscreen: "Stlačte stred vľavo pre zrušenie"
     vibe500: "Stlačte PREV pre zrušenie"
     xduoox20,xduoox3,xduoox3ii: "Poklepte HOME pre zrušenie"
@@ -14425,7 +14425,7 @@
   <voice>
     *: "Stlačte LEFT pre zrušenie"
     android: "Stlačte späť pre zrušenie"
-    hifietma*,zenvision: "Stlačte BACK pre zrušenie"
+    hifietma*: "Stlačte BACK pre zrušenie"
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Stlačte POWER pre zrušenie"
     ihifi760,ihifi960: "Poklepte RETURN pre zrušenie"
     ihifi770,ihifi770c,ihifi800: "Stlačte HOME pre zrušenie"
@@ -14446,7 +14446,7 @@
     *: "Date"
   </source>
   <dest>
-    *: "dátum"
+    *: "Dátum"
   </dest>
   <voice>
     *: "Dátum"
@@ -14474,7 +14474,7 @@
     *: "Cancel"
   </source>
   <dest>
-    *: "zrušiť"
+    *: "Zrušiť"
   </dest>
   <voice>
     *: "Zrušiť"
@@ -16802,7 +16802,7 @@
     *: "Logovanie"
   </dest>
   <voice>
-    *: "logovanie"
+    *: "Logovanie"
   </voice>
 </phrase>
 <phrase>
@@ -16958,5 +16958,19 @@
   </dest>
   <voice>
     *: "Oznámiť status"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_KEEP_DIRECTORY
+  desc: file browser setting
+  user: core
+  <source>
+    *: "Always remember last folder"
+  </source>
+  <dest>
+    *: "Vždy si zapamätať posledný priečinok"
+  </dest>
+  <voice>
+    *: "Vždy si zapamätať posledný priečinok"
   </voice>
 </phrase>

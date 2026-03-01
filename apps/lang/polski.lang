@@ -14367,7 +14367,7 @@
   user: core
   <source>
     *: "Press LEFT to cancel."
-    android,hifietma*,zenvision: "Press BACK to cancel."
+    android,hifietma*: "Press BACK to cancel."
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Press POWER to cancel."
     ihifi760,ihifi960: "Double tap RETURN to cancel."
     ihifi770,ihifi770c,ihifi800: "Press HOME to cancel."
@@ -14382,7 +14382,7 @@
   </source>
   <dest>
     *: "Wciśnij LEFT, aby anulować."
-    android,hifietma*,zenvision: "Wciśnij BACK, aby anulować."
+    android,hifietma*: "Wciśnij BACK, aby anulować."
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Wciśnij POWER, aby anulować."
     ihifi760,ihifi960: "Podwójnie stuknij RETURN, aby anulować."
     ihifi770,ihifi770c,ihifi800: "Wciśnij HOME, aby anulować."
@@ -14397,7 +14397,7 @@
   </dest>
   <voice>
     *: "Wciśnij left, aby anulować."
-    android,hifietma*,zenvision: "Wciśnij bak, aby anulować."
+    android,hifietma*: "Wciśnij bak, aby anulować."
     cowond2,creativezenxfi2,ibassodx50,ibassodx90,mrobe500,ondavx747: "Wciśnij pałer, aby anulować."
     ihifi760,ihifi960: "Podwójnie stuknij ritern, aby anulować."
     ihifi770,ihifi770c,ihifi800: "Wciśnij hołm, aby anulować."
@@ -16964,5 +16964,19 @@
   </dest>
   <voice>
     *: "Informuj o stanie"
+  </voice>
+</phrase>
+<phrase>
+  id: LANG_KEEP_DIRECTORY
+  desc: file browser setting
+  user: core
+  <source>
+    *: "Always remember last folder"
+  </source>
+  <dest>
+    *: "Zawsze pamiętaj ostatni katalog"
+  </dest>
+  <voice>
+    *: "Zawsze pamiętaj ostatni katalog"
   </voice>
 </phrase>
