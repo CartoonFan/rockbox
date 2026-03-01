@@ -12915,10 +12915,10 @@
     *: "Toggle Slideshow Mode"
   </source>
   <dest>
-    *: "Prepnúť režim slide show"
+    *: "Prepnúť režim prezentácie"
   </dest>
   <voice>
-    *: "Prepnúť režim slide show"
+    *: "Prepnúť režim prezentácie"
   </voice>
 </phrase>
 <phrase>
@@ -13027,10 +13027,10 @@
     *: "Pause / Play"
   </source>
   <dest>
-    *: "Pauza/Play"
+    *: "Pauza/Prehrať"
   </dest>
   <voice>
-    *: "Pauza/Play"
+    *: "Pauza lomeno Prehrať"
   </voice>
 </phrase>
 <phrase>
@@ -13373,10 +13373,10 @@
     *: "Slideshow Time"
   </source>
   <dest>
-    *: "Čas slideshow"
+    *: "Čas prezentácie"
   </dest>
   <voice>
-    *: "Čas slideshow"
+    *: "Čas prezentácie"
   </voice>
 </phrase>
 <phrase>
