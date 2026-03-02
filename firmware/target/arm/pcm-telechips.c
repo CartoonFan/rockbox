@@ -92,6 +92,7 @@ static void sink_dma_init(void)
 
 static void sink_set_freq(uint16_t freq)
 {
+    (void)freq;
 }
 
 static void play_start_pcm(void)
